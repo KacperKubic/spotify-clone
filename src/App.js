@@ -1,26 +1,42 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { connect, useDispatch } from "react-redux"
+import { setToken, setUser } from "./actions";
 import LoginPage from "./pages/LoginPage.js";
 import "./App.css";
+import SpotifyWebApi from "spotify-web-api-js";
+import Player from "./pages/Player";
 
-const App = () =>{
-  const [accessToken, setAccessToken] = useState(null)
+const App = (state) =>{
+  const dispatch = useDispatch();
+  const spotify = new SpotifyWebApi();
 
   useEffect(() => {
     const hash = window.location.hash;
     if(hash){
       const token = hash.substring(1).split("&")[0].split("=")[1];
       window.location.hash = "";
-      setAccessToken(token);
-    }
+      dispatch(setToken(token));
+      spotify.setAccessToken(token);
 
-    console.log(accessToken)
+      spotify.getMe().then((user) => {
+        dispatch(setUser(user))
+      })
+
+    }
   })
 
   return (
     <div className="app">
-      {accessToken ? <h1>Successfully logined in</h1> : <LoginPage />}
+      {state.token ? <Player/> : <LoginPage />}
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    token: state.token,
+    user: state.user,
+  }
+}
+
+export default connect(mapStateToProps)(App);
