@@ -1,0 +1,54 @@
+.player{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    height: 65px;
+    width: 98%;
+    background-color: #282828;
+    padding: 20px;
+}
+
+.player-left{
+    display: flex;
+    align-items: center;
+    flex: 0.3;
+    color: white;
+    width: 300px;
+}
+
+.player-left img{
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+.player-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0.4;
+    padding: 0 100px;
+    max-width: 300px;
+    color: white;
+}
+
+.player-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0.3;
+    color: white;
+}
+
+.player-icon:hover,
+.player-icon--green:hover{
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2) !important;
+}
+
+
+.player-right .MuiSlider-root{
+    color: green;
+}

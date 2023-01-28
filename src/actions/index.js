@@ -12,4 +12,26 @@ export const setUser = user => {
     }
 }
 
+export const setPlaylists = playlists => {
+    return{
+        type: 'SET_PLAYLISTS',
+        payload: playlists
+    }
+}
+
+export const setPlaylist = playlist => {
+    return{
+        type: 'SET_PLAYLIST',
+        payload: playlist
+    }
+}
+
+export const setSpotify = spotify => {
+    return{
+        type: 'SET_SPOTIFY',
+        payload: spotify
+    }
+}
+
+
 

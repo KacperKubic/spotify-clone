@@ -1,0 +1,119 @@
+.body{
+    height: auto;
+    min-height: 100vh;
+    flex: 0.8;
+    color: white;
+    padding: 30px;
+    background: linear-gradient(rgb(60, 50, 128), rgba(0, 0, 0, 0.8));
+}
+
+.bodyHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.bodyHeader-left{
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    min-width: 70px;
+    color: gray;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.bodyHeader-left input{
+    border: none;
+    width: 100%;
+}
+
+.bodyHeader-left input:focus{
+    outline: none;
+}
+
+.bodyHeader-right{
+    display: flex;
+    align-items: center;
+}
+
+.bodyHeader-right h4{
+    margin-left: 10px;
+}
+
+.bodyInfo{
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.bodyInfo img{
+    height: 20vw;
+    margin: 0 20px;
+}
+
+.bodyInfo-title{
+    flex: 1;
+}
+
+.bodyInfo-title h2{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.bodySongs{
+    margin: 20px -30px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bodySongs .bodySongs-icons{
+    display: flex;
+    align-items: center;
+}
+
+.bodySongs .bodySongs-icons .MuiSvgIcon-root{
+    margin-right: 20px;
+}
+
+.bodySongs-icons .icons-play{
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 80px;
+}
+
+.bodySongs-icons .icons-play:hover{
+    transition: 100ms transform ease-in;
+    transform: scale(1.08);
+}
+
+.singleSong{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.singleSong:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.singleSong img{
+    width: 40px;
+    height: 40px;
+}
+
+.singleSong-info{
+    margin-left: 20px;
+}
+
+.singleSong-info h1{
+    font-size: 16px;
+}
+
+.singleSong-info p{
+    color: gray;
+    margin-top: 3px;
+}

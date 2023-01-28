@@ -1,0 +1,50 @@
+.sidebar{
+    min-height: 100vh;
+    height: auto;
+    flex: 0.2;
+    color: white;
+    min-width: 230px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #040404;
+}
+
+.sidebar img{
+    height: 60px;
+    padding: 10px;
+    margin-right: auto;
+}
+
+.sidebar hr{
+    border: 1px solid #282828;
+    margin: 10px auto;
+    width: 90%;
+}
+
+.sidebar strong{
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.sidebarElement{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    cursor: pointer;
+    color: gray;
+    transition: 0.2s color ease-in;
+}
+
+.sidebarElement:hover{
+    color: white;
+}
+
+.sidebarElement-icon{
+    padding: 0 10px;
+}
+
+.sidebarElement p{
+    margin-top: 10px;
+    margin-left: 20px;
+}

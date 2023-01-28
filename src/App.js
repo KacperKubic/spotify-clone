@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux"
-import { setToken, setUser } from "./actions";
+import { setPlaylist, setPlaylists, setToken, setUser, setSpotify } from "./actions";
 import LoginPage from "./pages/LoginPage.js";
 import "./App.css";
 import SpotifyWebApi from "spotify-web-api-js";
-import Player from "./pages/Player";
+import Mainpage from "./pages/Mainpage";
 
 const App = (state) =>{
   const dispatch = useDispatch();
@@ -22,12 +22,23 @@ const App = (state) =>{
         dispatch(setUser(user))
       })
 
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch(setPlaylists(playlists))
+      })
+
+      spotify.getPlaylist('37i9dQZEVXcOcJN2mLpnk7').then((response) => {
+        dispatch(setPlaylist(response))
+      })
+
+      dispatch(setSpotify(spotify))
+
     }
   })
 
+
   return (
     <div className="app">
-      {state.token ? <Player/> : <LoginPage />}
+      {state.token ? <Mainpage/> : <LoginPage />}
     </div>
   );
 }
@@ -35,7 +46,6 @@ const App = (state) =>{
 const mapStateToProps = (state) => {
   return {
     token: state.token,
-    user: state.user,
   }
 }
 
