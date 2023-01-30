@@ -52,3 +52,34 @@
 .player-right .MuiSlider-root{
     color: green;
 }
+
+@media screen and (max-width: 1000px) {
+    .player-right{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .player{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80px;
+        padding: 20px 5px;
+    }
+
+    .player-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+        flex: 1;
+        color: white;
+        width: 100%;
+    }
+    
+    .player-left img{
+       display: none;
+    }
+}

@@ -2,6 +2,8 @@ import { PlayCircleOutline, PlaylistPlay, Repeat, Shuffle, SkipNext, SkipPreviou
 import { Grid, Slider } from "@mui/material";
 import React from "react";
 import '../styles/Player.css';
+import SpotifyPlayer from "react-spotify-web-playback";
+
 
 const Player = () => {
     return(

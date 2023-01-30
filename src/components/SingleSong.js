@@ -8,6 +8,8 @@ const SingleSong = ({ song }) => {
                 <h1>{song.name}</h1>
                 <p>
                     {song.artists.map((artist) => artist.name).join(", ")}
+                </p>
+                <p>
                     {song.album.name}
                 </p>
             </div>

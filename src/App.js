@@ -17,6 +17,7 @@ const App = (state) =>{
       window.location.hash = "";
       dispatch(setToken(token));
       spotify.setAccessToken(token);
+      console.log(token)
 
       spotify.getMe().then((user) => {
         dispatch(setUser(user))
@@ -30,7 +31,7 @@ const App = (state) =>{
         dispatch(setPlaylist(response))
       })
 
-      dispatch(setSpotify(spotify))
+      dispatch(setSpotify(spotify));
 
     }
   })

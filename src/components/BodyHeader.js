@@ -6,10 +6,10 @@ import { connect } from "react-redux";
 const BodyHeader = ({ user }) => {
     return ( 
         <div className="bodyHeader">
-            <div className="bodyHeader-left">
+            {/*<div className="bodyHeader-left">
                 <Search />
                 <input placeholder="Search..." type="text"/>
-            </div>
+            </div>*/}
             <div className="bodyHeader-right">
                 <Avatar src={user?.user?.images[0]?.url} alt="" />
                 <h4>{user?.user?.display_name}</h4>
