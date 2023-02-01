@@ -1,6 +1,6 @@
 const baseLoginEndpoint = "https://accounts.spotify.com/authorize"
 const clientId = "9ad1d68fb1b846118c50ac3241d5c368"
-const redirectUri = "http://192.168.33.10:3000/"
+const redirectUri = "https://kacper-kubic-spotify-clone.vercel.app/"
 const scopes = [
     "playlist-read-private",
     "streaming",
