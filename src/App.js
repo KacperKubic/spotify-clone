@@ -25,7 +25,7 @@ const App = (state) =>{
         dispatch(setPlaylists(playlists))
       })
 
-      spotify.getPlaylist('37i9dQZEVXcOcJN2mLpnk7').then((response) => {
+      spotify.getPlaylist('37i9dQZF1DX2L0iB23Enbq').then((response) => {
         dispatch(setPlaylist(response))
       })
 
