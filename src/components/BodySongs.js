@@ -1,18 +1,25 @@
 import { Favorite, MoreHoriz, PlayCircleFilled } from "@mui/icons-material";
 import React from "react";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
+import { setPlaylistId } from "../actions";
 import SingleSong from "./SingleSong";
 
 const BodySongs = ({ playlist }) => {
+    const dispatch = useDispatch()
+
+    const playlistId = (id) => {
+      dispatch(setPlaylistId(id));
+    }
+
     return ( 
         <div className="bodySongs">
                 <div className="bodySongs-icons">
-                    <PlayCircleFilled className="icons-play"/>
+                    <PlayCircleFilled className="icons-play" onClick={() => {playlistId(playlist?.playlist?.id)}}/>
                     <Favorite fontSize="large"/>
                     <MoreHoriz/>
                 </div>
                 {playlist?.playlist?.tracks.items.map((item) => {
-                    return <SingleSong key={item.id} song={item.track}/>
+                    return <SingleSong key={item.track.id} song={item.track}/>
                 })}
             </div>
      );

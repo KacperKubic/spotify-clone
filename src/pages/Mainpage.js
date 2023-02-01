@@ -5,7 +5,6 @@ import '../styles/Mainpage.css';
 import Player from "../components/Player";
 
 const Mainpage = () => {
-
     return ( 
         <div className="mainpage">
             <div className="mainpage-body">

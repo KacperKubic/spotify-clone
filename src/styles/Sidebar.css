@@ -1,6 +1,6 @@
 .sidebar{
-    min-height: 100vh;
-    height: auto;
+    height: 100vh;
+    overflow-y: overlay;
     flex: 0.2;
     color: white;
     min-width: 230px;
@@ -10,7 +10,7 @@
 }
 
 .sidebar img{
-    height: 60px;
+    height: 70px;
     padding: 10px;
     margin-right: auto;
 }
@@ -21,7 +21,7 @@
     width: 90%;
 }
 
-.sidebar strong{
+.sidebar-title{
     font-size: 12px;
     margin-left: 10px;
     padding: 5px;

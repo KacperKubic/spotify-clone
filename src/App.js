@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux"
 import { setPlaylist, setPlaylists, setToken, setUser, setSpotify } from "./actions";
 import LoginPage from "./pages/LoginPage.js";
-import "./App.css";
 import SpotifyWebApi from "spotify-web-api-js";
 import Mainpage from "./pages/Mainpage";
 
@@ -17,7 +16,6 @@ const App = (state) =>{
       window.location.hash = "";
       dispatch(setToken(token));
       spotify.setAccessToken(token);
-      console.log(token)
 
       spotify.getMe().then((user) => {
         dispatch(setUser(user))

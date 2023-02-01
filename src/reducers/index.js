@@ -4,6 +4,8 @@ import userReducer from "./userReducer";
 import playlistsReducer from "./playlistsReducer"
 import playlistReducer from "./playlistReducer"
 import spotifyReducer from "./spotifyReducer"
+import currentSongReducer from "./currentSongReducer";
+import playlistIdReducer from "./playlistIdReducer";
 
 
 export default combineReducers({
@@ -11,5 +13,7 @@ export default combineReducers({
     user: userReducer,
     playlists: playlistsReducer,
     playlist: playlistReducer,
-    spotify: spotifyReducer
+    spotify: spotifyReducer,
+    currentSong: currentSongReducer,
+    playlistId: playlistIdReducer,
 })

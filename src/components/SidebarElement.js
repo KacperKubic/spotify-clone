@@ -3,11 +3,9 @@ import { connect, useDispatch } from "react-redux";
 
 const SidebarElement = ({ spotify, playlist, title, Icon }) => {
     const dispatch = useDispatch();
-
     const setPlaylist = (id) => {
         spotify?.spotify.getPlaylist(id).then((response) => {
             dispatch({type: "SET_PLAYLIST", payload: response})
-            console.log(response)
         })
     }
 

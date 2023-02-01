@@ -1,8 +1,16 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { setCurrentSong } from "../actions";
 
 const SingleSong = ({ song }) => {
+    const dispatch = useDispatch();
+
+    const setSong = (id) => {
+        dispatch(setCurrentSong(id))
+    }
+    
     return ( 
-        <div className="singleSong">
+        <div className="singleSong" onClick={() => {setSong(song.id)}}>
             <img src={song?.album.images[0].url} alt=""/>
             <div className="singleSong-info">
                 <h1>{song.name}</h1>

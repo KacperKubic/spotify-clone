@@ -33,5 +33,20 @@ export const setSpotify = spotify => {
     }
 }
 
+export const setCurrentSong = currentSong => {
+    return{
+        type: 'SET_CURRENT_SONG',
+        payload: currentSong
+    }
+}
+
+export const setPlaylistId = playlistId => {
+    return{
+        type: 'SET_PLAYLIST_ID',
+        payload: playlistId
+    }
+}
+
+
 
 
