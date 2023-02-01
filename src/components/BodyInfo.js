@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 const BodyInfo = ({ playlist }) => {
+    //Component with playlist cover, name and description
     return ( 
         <div className="bodyInfo">
             <img src={playlist?.playlist?.images[0].url} alt=""/>

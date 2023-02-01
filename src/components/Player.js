@@ -9,6 +9,7 @@ const Player = ({ token, currentSong, playlistId }) => {
     const [dataType, setDataType] = useState("track");
     const [songs, setSongs] = useState(null);
 
+    //On change of currentSong or PlaylistId state set different datatype and song to put in player URIS
     useEffect(() => {
         setPlay(true)
         setDataType("track")
@@ -24,9 +25,10 @@ const Player = ({ token, currentSong, playlistId }) => {
 
     return(
         <div className="player">
+           {/*Spotify Web Player component*/}
            <SpotifyPlayer 
             token={token?.token} 
-            uris={currentSong ? [`spotify:${dataType}:${songs}`] : []} 
+            uris={currentSong || playlistId ? [`spotify:${dataType}:${songs}`] : []} 
             play={play} 
             callback={state => {if(!state.isPlaying) setPlay(false)}} 
             styles={{

@@ -1,21 +1,24 @@
 import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux"
-import { setPlaylist, setPlaylists, setToken, setUser, setSpotify } from "./actions";
+import { setPlaylist, setPlaylists, setToken, setUser, setSpotify, setPlaylistId } from "./actions";
 import LoginPage from "./pages/LoginPage.js";
 import SpotifyWebApi from "spotify-web-api-js";
 import Mainpage from "./pages/Mainpage";
+import { getTokenFromResponse } from "./spotifyConfig";
 
-const App = (state) =>{
+const App = ({ token }) =>{
   const dispatch = useDispatch();
   const spotify = new SpotifyWebApi();
 
+  //Use effect that run on first page load, take the access token out of website url, set spotity web api access token and dispatch loggined user, playlists and base playlist
   useEffect(() => {
-    const hash = window.location.hash;
-    if(hash){
-      const token = hash.substring(1).split("&")[0].split("=")[1];
-      window.location.hash = "";
-      dispatch(setToken(token));
-      spotify.setAccessToken(token);
+    const hash = getTokenFromResponse();
+    window.location.hash = "";
+    let _token = hash.access_token;
+
+    if(_token){
+      dispatch(setToken(_token));
+      spotify.setAccessToken(_token);
 
       spotify.getMe().then((user) => {
         dispatch(setUser(user))
@@ -30,14 +33,14 @@ const App = (state) =>{
       })
 
       dispatch(setSpotify(spotify));
-
     }
   })
 
 
+  //If there is an access token display Mainpage if not display Loginpage
   return (
     <div className="app">
-      {state.token ? <Mainpage/> : <LoginPage />}
+      {token?.token ? <Mainpage/> : <LoginPage />}
     </div>
   );
 }

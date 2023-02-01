@@ -9,6 +9,7 @@ const SingleSong = ({ song }) => {
         dispatch(setCurrentSong(id))
     }
     
+    //Return song img, song name and map through artists and display all of them
     return ( 
         <div className="singleSong" onClick={() => {setSong(song.id)}}>
             <img src={song?.album.images[0].url} alt=""/>

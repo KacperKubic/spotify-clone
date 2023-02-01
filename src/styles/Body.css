@@ -72,6 +72,7 @@
 .bodySongs-icons .icons-play:hover{
     transition: 100ms transform ease-in;
     transform: scale(1.08);
+    cursor: pointer;
 }
 
 .singleSong{
