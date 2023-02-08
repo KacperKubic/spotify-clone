@@ -8,9 +8,9 @@ const Sidebar = ({ playlists }) => {
     return(
         <div className="sidebar">
             <img src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt=""/>
-            <SidebarElement title="Home" Icon={Home} />
+            <SidebarElement title="Home" Icon={Home}/>
             <SidebarElement title="Search" Icon={Search} />
-            <SidebarElement title="Your Library" Icon={LibraryMusic} />
+            <SidebarElement title="Library" Icon={LibraryMusic} />
             <strong className="sidebar-title">PLAYLISTS</strong>
             <hr />
             {playlists?.playlists?.items?.map((playlist) => {

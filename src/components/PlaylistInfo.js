@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const BodyInfo = ({ playlist }) => {
+const PlaylistInfo = ({ playlist }) => {
     //Component with playlist cover, name and description
     return ( 
         <div className="bodyInfo">
@@ -22,4 +22,4 @@ const mapStateToProps = (state) => {
     }
   }
   
-export default connect(mapStateToProps)(BodyInfo);
+export default connect(mapStateToProps)(PlaylistInfo);

@@ -26,7 +26,8 @@ const Player = ({ token, currentSong, playlistId }) => {
     return(
         <div className="player">
            {/*Spotify Web Player component*/}
-           <SpotifyPlayer 
+           {currentSong?.currentSong ? (
+            <SpotifyPlayer 
             token={token?.token} 
             uris={currentSong || playlistId ? [`spotify:${dataType}:${songs}`] : []} 
             play={play} 
@@ -37,6 +38,19 @@ const Player = ({ token, currentSong, playlistId }) => {
                 sliderColor: '#1db954',
                 trackNameColor: '#f2f2f2',
             }}/>
+           ) : playlistId?.playlistId ? (
+            <SpotifyPlayer 
+            token={token?.token} 
+            uris={currentSong || playlistId ? [`spotify:${dataType}:${songs}`] : []} 
+            play={play} 
+            callback={state => {if(!state.isPlaying) setPlay(false)}} 
+            styles={{
+                bgColor: "#282828",
+                color: '#f2f2f2',
+                sliderColor: '#1db954',
+                trackNameColor: '#f2f2f2',
+            }}/>
+           ) : null}
         </div>
     )
 }

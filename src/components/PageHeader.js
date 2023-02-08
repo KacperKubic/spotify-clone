@@ -2,7 +2,7 @@ import { Avatar } from "@mui/material";
 import React from "react";
 import { connect } from "react-redux";
 
-const BodyHeader = ({ user }) => {
+const PageHeader = ({ user }) => {
     //Component with user avatar and username
     return ( 
         <div className="bodyHeader">
@@ -20,4 +20,4 @@ const mapStateToProps = (state) => {
     }
   }
   
-export default connect(mapStateToProps)(BodyHeader);
+export default connect(mapStateToProps)(PageHeader);

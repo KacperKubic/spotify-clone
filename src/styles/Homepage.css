@@ -1,0 +1,110 @@
+.homepage{
+    height: auto;
+    height: 100vh;
+    overflow-y: overlay;
+    flex: 0.8;
+    color: white;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+    background-color: rgb(136, 131, 160);
+}
+
+.homepage-session-one{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.homepage-session-one .homepage-session-two h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.homepage-session-one .session-one-items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.homepage-song{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 450px;
+    justify-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.25);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.homepage-song img{
+    height: 100%;
+    object-fit: contain;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.homepage-song h4{
+    margin-left: 12px;
+}
+
+.homepage-song:hover{
+    background-color: rgba(0, 0, 0, 0.13);
+    cursor: pointer;
+}
+
+.homepage-session-two{
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage-session-two .session-two-items{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homepage-playlists{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.homepage-playlist{
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+    width: 160px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.homeage-playlist img{
+    border-radius: 10px;
+}
+
+.homepage-playlist h4{
+    margin-top: 15px;
+}
+
+.homepage-playlist p{
+    margin-top: 10px;
+    color: gray;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+}
+
+.homepage-playlist:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}

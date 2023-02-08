@@ -1,6 +1,6 @@
 const baseLoginEndpoint = "https://accounts.spotify.com/authorize"
 const clientId = "9ad1d68fb1b846118c50ac3241d5c368"
-const redirectUri = "https://kacper-kubic-spotify-clone.vercel.app/"
+const redirectUri = "http://localhost:3000/"
 const scopes = [
     "playlist-read-private",
     "streaming",
@@ -9,6 +9,7 @@ const scopes = [
     "user-read-playback-state",
     "user-modify-playback-state",
     "user-read-currently-playing",
+    "user-top-read",
 ];
 
 export const getTokenFromResponse = () => {
@@ -18,7 +19,6 @@ export const getTokenFromResponse = () => {
       .reduce((initial, item) => {
         var parts = item.split("=");
         initial[parts[0]] = decodeURIComponent(parts[1]);
-  
         return initial;
       }, {});
   };

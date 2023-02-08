@@ -4,7 +4,7 @@ import { connect, useDispatch } from "react-redux";
 import { setPlaylistId } from "../actions";
 import SingleSong from "./SingleSong";
 
-const BodySongs = ({ playlist }) => {
+const PlaylistSongs = ({ playlist }) => {
     const dispatch = useDispatch()
 
     //Dispatch playlistId on click on playbuttton
@@ -33,4 +33,4 @@ const mapStateToProps = (state) => {
     }
   }
   
-export default connect(mapStateToProps)(BodySongs);
+export default connect(mapStateToProps)(PlaylistSongs);

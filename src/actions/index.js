@@ -47,6 +47,10 @@ export const setPlaylistId = playlistId => {
     }
 }
 
-
-
+export const setLocation = currentLocation => {
+    return{
+        type: 'SET_LOCATION',
+        payload: currentLocation
+    }
+}
 

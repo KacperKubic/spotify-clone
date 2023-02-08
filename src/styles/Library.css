@@ -1,0 +1,42 @@
+.library{
+    height: auto;
+    height: 100vh;
+    overflow-y: overlay;
+    flex: 0.8;
+    color: white;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 1));
+    background-color: rgb(140, 194, 219);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.library-playlist{
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    width: 170px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 10px 15px;
+}
+
+.library-playlist img{
+    border-radius: 10px;
+}
+
+.library-playlist h4{
+    margin-top: 15px;
+}
+
+.library-playlist p{
+    margin-top: 10px;
+    color: gray;
+}
+
+.library-playlist:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}

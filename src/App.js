@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect, useDispatch } from "react-redux"
-import { setPlaylist, setPlaylists, setToken, setUser, setSpotify, setPlaylistId } from "./actions";
+import { setPlaylists, setToken, setUser, setSpotify } from "./actions";
 import LoginPage from "./pages/LoginPage.js";
 import SpotifyWebApi from "spotify-web-api-js";
 import Mainpage from "./pages/Mainpage";
@@ -26,10 +26,6 @@ const App = ({ token }) =>{
 
       spotify.getUserPlaylists().then((playlists) => {
         dispatch(setPlaylists(playlists))
-      })
-
-      spotify.getPlaylist('37i9dQZF1DX2L0iB23Enbq').then((response) => {
-        dispatch(setPlaylist(response))
       })
 
       dispatch(setSpotify(spotify));
