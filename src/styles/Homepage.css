@@ -3,6 +3,7 @@
     height: 100vh;
     overflow-y: overlay;
     flex: 0.8;
+    width: 100%;
     color: white;
     padding: 30px;
     background: linear-gradient(transparent, rgba(0, 0, 0, 1));
@@ -107,4 +108,16 @@
 .homepage-playlist:hover{
     background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+    .homepage-song{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .homepage{
+        flex: 1;
+    }
 }
