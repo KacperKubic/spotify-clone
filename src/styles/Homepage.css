@@ -121,3 +121,17 @@
         flex: 1;
     }
 }
+
+@media screen and (max-width: 460px) {
+    .homepage-session-two .session-two-items{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .homepage-playlist{
+        width: 250px;
+        height: 350px;
+    }
+    
+}

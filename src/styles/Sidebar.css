@@ -49,8 +49,53 @@
     margin-left: 20px;
 }
 
+.sidebar .toggled{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .toggled .sidebar-icon{
+    display: none;
+}
+
 @media screen and (max-width: 1000px) {
     .sidebar{
-        display: none;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        left: -98%;
+    }
+
+    .sidebar .toggled .sidebar-icon{
+        display: block;
+        font-size: 25px;
+    }
+
+    .sidebar-active{
+        height: 100vh;
+        overflow-y: overlay;
+        flex: 0.2;
+        color: white;
+        min-width: 230px;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #040404;
+    }
+
+    .sidebar-active .toggled{
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar-active img{
+        height: 60px;
+        padding: 10px;
+        margin-right: auto;
+    }
+    
+    .sidebar-active hr{
+        border: 1px solid #282828;
+        margin: 10px auto;
+        width: 90%;
     }
 }
